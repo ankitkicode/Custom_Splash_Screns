@@ -58,7 +58,8 @@ class _SplashSpotifyState extends State<SplashSpotify>
       Navigator.pushReplacementNamed(context, '/dashboard');
     });
   }
-
+  
+ 
   @override
   void dispose() {
     _logoController.dispose();
