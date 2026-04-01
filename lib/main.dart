@@ -1,18 +1,7 @@
-import 'package:demo_flutter_project/splash/splash1_glass.dart';
-import 'package:demo_flutter_project/splash/splash2_minimal.dart';
-import 'package:demo_flutter_project/splash/splash3_neumorphic.dart';
-import 'package:demo_flutter_project/splash/splash4_gradient.dart';
-import 'package:demo_flutter_project/splash/splash5_darkmodern.dart';
-import 'package:demo_flutter_project/splash/splash_circular_progress.dart';
-import 'package:demo_flutter_project/splash/splash_hotstar.dart';
-import 'package:demo_flutter_project/splash/splash_morphing.dart';
-import 'package:demo_flutter_project/splash/splash_netflix.dart';
-import 'package:demo_flutter_project/splash/splash_ripple.dart';
-import 'package:demo_flutter_project/splash/splash_skewed_slide.dart';
-import 'package:demo_flutter_project/splash/splash_spotify.dart';
-import 'package:demo_flutter_project/splash/splash_youtube.dart';
+import 'package:demo_flutter_project/dashboard/dashboard_screen_2.dart';
+import 'package:demo_flutter_project/splash/food_splash_screen.dart';
 import 'package:flutter/material.dart';
-import 'dashboard_screen.dart';
+import '/dashboard/dashboard_screen_2.dart';
 // Make sure this file exists
 
 void main() => runApp(const DashboardApp());
@@ -26,7 +15,7 @@ class DashboardApp extends StatelessWidget {
       title: 'Task Dashboard',
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: Colors.transparent,
+        scaffoldBackgroundColor: Colors.white,
         textTheme: Theme.of(context).textTheme.apply(
           fontFamily: 'Poppins',
         ),
@@ -38,8 +27,8 @@ class DashboardApp extends StatelessWidget {
       // Start app with splash screen
       initialRoute: '/',
       routes: {
-        '/': (context) => const SplashYoutube(), // ⬅ Splash shown first
-        '/dashboard': (context) => const DashboardScreen(),
+        '/': (context) => const FoodSplashScreen(), // ⬅ Splash shown first
+        '/dashboard': (context) => const DashboardScreen2(),
       },
     );
   }

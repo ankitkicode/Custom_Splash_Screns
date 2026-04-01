@@ -1,9 +1,20 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+   <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+    <!-- Agar background me bhi location chahiye -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/> -->
+
     <application
         android:label="demo_flutter_project"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher"
         android:enableOnBackInvokedCallback="true">
+<!-- Add your API Key right here -->
+        <meta-data android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAGGoQ7lE6LNzXKoNyokNZNq0brCEQzk6E"/>
+
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
